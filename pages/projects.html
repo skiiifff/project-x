@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Первухин Александр — Проекты</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="brand">
+        <a href="../index.html" class="logo">
+            <img src="../assets/favicon.png" alt="Логотип">
+        </a>
+        <h1 class="name">Первухин Александр</h1>
+    </div>
+    <nav class="nav">
+        <a href="../index.html">Главная</a>
+        <a href="projects.html" class="active">Проекты</a>
+        <a href="diary.html">Дневник</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="projects-section">
+        <h2>Мои проекты</h2>
+
+        <div class="project-filters">
+            <button data-filter="all" class="active">Все</button>
+            <button data-filter="layout">Один</button>
+            <button data-filter="java">Два</button>
+            <button data-filter="freelance">Три</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="layout" onclick="openModal('дорогие друзья')">
+                <h3>дорогие друзья</h3>
+                <p>...</p>
+            </div>
+            <div class="project-card" data-category="java" onclick="openModal('я устал')">
+                <h3>'я устал</h3>
+                <p>...</p>
+            </div>
+            <div class="project-card" data-category="freelance" onclick="openModal('я ухожу')">
+                <h3>я ухожу</h3>
+                <p>.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 Контакты</p>
+</footer>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-tech"></p>
+        <div id="modal-screenshots"></div>
+    </div>
+</div>
+
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
